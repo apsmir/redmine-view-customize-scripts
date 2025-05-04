@@ -1,2 +1,2 @@
 # redmine-view-customize-scripts
-скрипты для redmine-view-customize
+scripts for redmine-view-customize
