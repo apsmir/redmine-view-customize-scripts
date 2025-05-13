@@ -64,7 +64,7 @@
           let wBefore = currentCol.width(false);
           let currentColNewWidth = Math.max(minWidth, currentColWidth + delta);
           currentCol.css('width', currentColNewWidth + 'px');
-          console.log("currentCol", currentColWidth, delta, currentColNewWidth, currentCol.width());
+          //console.log("currentCol", currentColWidth, delta, currentColNewWidth, currentCol.width());
 
           let nextColNewWidth = Math.max(minWidth, nextColWidth - delta);
           wAfter = currentCol.width();
@@ -118,18 +118,18 @@
       .text(`
         .list.issues th {
           position: relative;
-          border-right: 2px solid #ddd !important;
         }
         
         .list.issues th:hover .column-resize-handle {
           background: #666;
+          width: 3px;
         }
         
         .column-resize-handle {
           position: absolute;
           top: 0;
           right: -1px;
-          width: 5px;
+          width: 2px;
           height: 100%;
           background: #ddd;
           cursor: col-resize;
@@ -140,8 +140,7 @@
         .column-resize-handle:hover,
         .resizing .column-resize-handle {
           background: #444;
-          width: 5px;
-          right: 1px;
+          width: 3px;
         }
         
         .list.issues.resizing * {
@@ -149,13 +148,13 @@
         }
 						  
 
-	      .list.issues th {
+        .list.issues th {
           overflow: hidden;
-	        text-overflow: ellipsis;
+          text-overflow: ellipsis;
           white-space: normal;    /* Разрешает перенос строк */ 
           word-wrap: break-word;  /* Переносит длинные слова */
           word-break: break-word; /* Универсальная поддержка */	        
-	      }        
+        }        
 	      
         /* Добавляем стили для строк */
         .list.issues td {
